@@ -1,0 +1,32 @@
+AllCops:
+  Include:
+    - '**/Gemfile'
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+
+Style/BlockComments:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/BlockDelimiters:
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/CyclomaticComplexity:
+  Severity: error
+
+MethodLength:
+  Max: 15
+
+ClassLength:
+  Max: 150
+
+Style/MultilineTernaryOperator:
+  Enabled: false
