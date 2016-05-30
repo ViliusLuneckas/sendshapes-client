@@ -4,9 +4,9 @@ module Sendshapes
    class Client
     attr_reader :api_key
 
-    def initialize(api_key, base_url = 'https://widget.sendshapes.com:3443', end_point = 'api3')
+    def initialize(api_key, base_url = 'https://widget.sendshapes.com:3443', version = 3)
       @api_key   = api_key
-      @connection = RestClient::Resource.new("#{base_url}/#{end_point}")
+      @connection = RestClient::Resource.new("#{base_url}/api#{version}")
     end
 
     def create_transaction(file_path, receiver_email, print_value, partner_job_id)
